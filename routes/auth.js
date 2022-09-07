@@ -25,11 +25,13 @@ router.post('/users/login', (req, res, next) => {
 
 })
 
-// router.post('/users/signup', function(req, res, next) {
-//   console.log("signup page");
-//   authController.signUp(req, res, next);
-// }) 
-router.post('/users/signup', authController.signUp)
+router.post('/users/signup', function(req, res, next) {
+  console.log("signup page");
+
+  authController.signUp(req, res, next);
+})  
+
+// router.post('/users/signup', authController.signUp)
 module.exports = router;
 
  
